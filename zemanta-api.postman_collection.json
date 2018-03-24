@@ -1,0 +1,4959 @@
+{
+	"info": {
+		"name": "Zemanta API",
+		"_postman_id": "ba98d43d-6665-8fd6-b6c3-32599746fc06",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.0 Authorization",
+			"description": "",
+			"item": [
+				{
+					"name": "OAuth - Get Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic base64{{client_id}}:{{client_secret}})"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/o/token/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"o",
+								"token",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2.0 Account Management",
+			"description": "",
+			"item": [
+				{
+					"name": "Account",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"archived\":true\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"accounts",
+								"{{accountId}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"archived\":true\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/accounts/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"accounts",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"My Account 1\",\n  \"targeting\": {\n    \"publisherGroups\": {\n      \"included\": [\n        \"153\"\n      ],\n      \"excluded\": [\n        \"154\"\n      ]\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"accounts",
+								"{{accountId}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Active Credits",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"archived\":true\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/credits/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"accounts",
+								"{{accountId}}",
+								"credits",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3.0 Campaign Management",
+			"description": "",
+			"item": [
+				{
+					"name": "3.1 Campaigns",
+					"description": "",
+					"item": [
+						{
+							"name": "Campaign",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Campaigns",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Campaign",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"My Campaign 2\",\n  \"archived\": false,\n  \"iabCategory\": \"IAB1_1\",\n  \"tracking\": {\n    \"ga\": {\n      \"enabled\": true,\n      \"type\": \"API\",\n      \"webPropertyId\": \"UA-123456789-1\"\n    },\n    \"adobe\": {\n      \"enabled\": true,\n      \"trackingParameter\": \"cid\"\n    }\n  },\n  \"targeting\": {\n    \"publisherGroups\": {\n      \"included\": [\n        \"27883\"\n      ],\n      \"excluded\": [\n        \"27883\"\n      ]\n    }\n  },\n  \"accountId\": \"490\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Campaign",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"My Campaign 1\",\n  \"archived\": false,\n  \"iabCategory\": \"IAB1_1\",\n  \"tracking\": {\n    \"ga\": {\n      \"enabled\": true,\n      \"type\": \"API\",\n      \"webPropertyId\": \"UA-123456789-1\"\n    },\n    \"adobe\": {\n      \"enabled\": true,\n      \"trackingParameter\": \"cid\"\n    }\n  },\n  \"targeting\": {\n    \"publisherGroups\": {\n      \"included\": [\n        \"27883\"\n      ],\n      \"excluded\": [\n        \"27883\"\n      ]\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Campaign Performance",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/stats/?from={{from}}&to={{to}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"stats",
+										""
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "{{from}}",
+											"equals": true
+										},
+										{
+											"key": "to",
+											"value": "{{to}}",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "3.2 Campaign Budgets",
+					"description": "",
+					"item": [
+						{
+							"name": "Campaign Budget",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/budgets/{{budgetId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"budgets",
+										"{{budgetId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Campaign Budgets",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/budgets/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"budgets",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Campaign Budget",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"creditId\": \"861\",\n  \"amount\": \"600\",\n  \"startDate\": \"2016-01-01\",\n  \"endDate\": \"2016-01-31\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/budgets/{{budgetId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"budgets",
+										"{{budgetId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Campaign Budget",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": \"800\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/budgets/{{budgetId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"budgets",
+										"{{budgetId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "3.3 Campaign Goals",
+					"description": "",
+					"item": [
+						{
+							"name": "Campaign Goal",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/goals/{{goalId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"goals",
+										"{{goalId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Campaign Goals",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/goals/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"goals",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Campaign Goal",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"type\": \"CPA\",\n  \"value\": \"30.0\",\n  \"primary\": false,\n  \"conversionGoal\": {\n    \"type\": \"GA\",\n    \"name\": \"My conversion goal 2\",\n    \"conversionWindow\": \"LEQ_7_DAYS\",\n    \"goalId\": \"mygoal\",\n    \"pixelUrl\": \"http://example.com/mypixel1\"\n  }\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/goals/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"goals",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Campaign Goal",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"primary\": true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/goals/{{goalId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"goals",
+										"{{goalId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Campaign Goal",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/goals/{{goalId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"campaigns",
+										"{{campaignId}}",
+										"goals",
+										"{{goalId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "4.0 Ad Group Management",
+			"description": "",
+			"item": [
+				{
+					"name": "4.1 Ad Groups",
+					"description": "",
+					"item": [
+						{
+							"name": "Ad Group",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/{{adGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										"{{adGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Ad Groups",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/?campaignId={{campaignId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										""
+									],
+									"query": [
+										{
+											"key": "campaignId",
+											"value": "{{campaignId}}",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Ad Group",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"campaignId\": \"608\",\n  \"name\": \"My ad group 1\",\n  \"state\": \"INACTIVE\",\n  \"archived\": false,\n  \"startDate\": \"2016-10-05\",\n  \"endDate\": \"2116-11-05\",\n  \"maxCpc\": \"0.25\",\n  \"maxCpm\": \"1.20\",\n  \"dailyBudget\": \"20.0\",\n  \"targeting\": {\n    \"devices\": [\n      \"DESKTOP\",\n      \"MOBILE\"\n    ],\n    \"placements\": [\n      \"SITE\",\n      \"APP\"\n    ],\n    \"os\": [\n      {\n        \"name\": \"ANDROID\",\n        \"version\": {\n          \"min\": \"ANDROID_6_0\",\n          \"max\": \"ANDROID_7_1\"\n        }\n      }\n    ],\n    \"geo\": {\n      \"included\": {\n        \"countries\": [\n          \"CA\"\n        ],\n        \"regions\": [\n          \"US-NY\"\n        ],\n        \"dma\": [\n          \"693\"\n        ],\n        \"cities\": [\n          \"123456\"\n        ],\n        \"postalCodes\": [\n          \"US:10001\"\n        ]\n      },\n      \"excluded\": {\n        \"countries\": [\n          \"CA\"\n        ],\n        \"regions\": [\n          \"US-NY\"\n        ],\n        \"dma\": [\n          \"693\"\n        ],\n        \"cities\": [\n          \"123456\"\n        ],\n        \"postalCodes\": [\n          \"US:10001\"\n        ]\n      }\n    },\n    \"interest\": {\n      \"included\": [\n        \"WOMEN\",\n        \"FASHION\"\n      ],\n      \"excluded\": [\n        \"POLITICS\"\n      ]\n    },\n    \"publisherGroups\": {\n      \"included\": [\n        \"153\"\n      ],\n      \"excluded\": [\n        \"154\"\n      ]\n    },\n    \"audiences\": {\n      \"AND\": [\n        {\n          \"category\": \"bluekai:21230\"\n        }\n      ]\n    },\n    \"customAudiences\": {\n      \"included\": [\n        \"123\"\n      ],\n      \"excluded\": [\n        \"124\"\n      ]\n    },\n    \"retargetingAdGroups\": {\n      \"included\": [\n        \"2050\"\n      ],\n      \"excluded\": [\n        \"2051\"\n      ]\n    }\n  },\n  \"trackingCode\": \"this=1&that=2\",\n  \"autopilot\": {\n    \"state\": \"ACTIVE_CPC\",\n    \"dailyBudget\": \"100.0001\"\n  },\n  \"dayparting\": {\n    \"monday\": [\n      0,\n      1,\n      2,\n      3\n    ],\n    \"friday\": [\n      20,\n      21,\n      22,\n      23\n    ],\n    \"timezone\": \"America/New_York\"\n  },\n  \"deliveryType\": \"STANDARD\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Ad Group",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"My ad group 1\",\n  \"state\": \"INACTIVE\",\n  \"archived\": false,\n  \"startDate\": \"2016-10-05\",\n  \"endDate\": \"2116-11-05\",\n  \"maxCpc\": \"0.25\",\n  \"maxCpm\": \"1.20\",\n  \"dailyBudget\": \"20.0\",\n  \"targeting\": {\n    \"devices\": [\n      \"DESKTOP\",\n      \"MOBILE\"\n    ],\n    \"placements\": [\n      \"SITE\",\n      \"APP\"\n    ],\n    \"os\": [\n      {\n        \"name\": \"ANDROID\",\n        \"version\": {\n          \"min\": \"ANDROID_6_0\",\n          \"max\": \"ANDROID_7_1\"\n        }\n      }\n    ],\n    \"geo\": {\n      \"included\": {\n        \"countries\": [\n          \"CA\"\n        ],\n        \"regions\": [\n          \"US-NY\"\n        ],\n        \"dma\": [\n          \"693\"\n        ],\n        \"cities\": [\n          \"123456\"\n        ],\n        \"postalCodes\": [\n          \"US:10001\"\n        ]\n      },\n      \"excluded\": {\n        \"countries\": [\n          \"CA\"\n        ],\n        \"regions\": [\n          \"US-NY\"\n        ],\n        \"dma\": [\n          \"693\"\n        ],\n        \"cities\": [\n          \"123456\"\n        ],\n        \"postalCodes\": [\n          \"US:10001\"\n        ]\n      }\n    },\n    \"interest\": {\n      \"included\": [\n        \"WOMEN\",\n        \"FASHION\"\n      ],\n      \"excluded\": [\n        \"POLITICS\"\n      ]\n    },\n    \"publisherGroups\": {\n      \"included\": [\n        \"153\"\n      ],\n      \"excluded\": [\n        \"154\"\n      ]\n    },\n    \"audiences\": {\n      \"AND\": [\n        {\n          \"category\": \"bluekai:21230\"\n        }\n      ]\n    },\n    \"customAudiences\": {\n      \"included\": [\n        \"123\"\n      ],\n      \"excluded\": [\n        \"124\"\n      ]\n    },\n    \"retargetingAdGroups\": {\n      \"included\": [\n        \"2050\"\n      ],\n      \"excluded\": [\n        \"2051\"\n      ]\n    }\n  },\n  \"trackingCode\": \"this=1&that=2\",\n  \"autopilot\": {\n    \"state\": \"ACTIVE_CPC\",\n    \"dailyBudget\": \"100.0001\"\n  },\n  \"dayparting\": {\n    \"monday\": [\n      0,\n      1,\n      2,\n      3\n    ],\n    \"friday\": [\n      20,\n      21,\n      22,\n      23\n    ],\n    \"timezone\": \"America/New_York\"\n  },\n  \"deliveryType\": \"STANDARD\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/{{adGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										"{{adGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "4.2 Ad Group Sources",
+					"description": "",
+					"item": [
+						{
+							"name": "Ad Group Source",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/{{adGroupId}}/sources/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										"{{adGroupId}}",
+										"sources",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Ad Group Source",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"source\": \"adiant\",\n  \"state\": \"ACTIVE\",\n  \"dailyBudget\": \"15.0\",\n  \"cpc\": \"0.25\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/{{adGroupId}}/sources/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										"{{adGroupId}}",
+										"sources",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Ad Group Source(s)",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"source\": \"gumgum\",\n    \"dailyBudget\": \"15.0\",\n    \"cpc\": \"0.25\"\n  },\n  {\n    \"source\": \"triplelift\",\n    \"state\": \"INACTIVE\"\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/{{adGroupId}}/sources/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										"{{adGroupId}}",
+										"sources",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "4.3 RTB as one",
+					"description": "",
+					"item": [
+						{
+							"name": "RTB as one",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n  \"archived\":true\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/{{adGroupId}}/sources/rtb/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										"{{adGroupId}}",
+										"sources",
+										"rtb",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update RTB as one",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"groupEnabled\": true,\n  \"state\": \"INACTIVE\",\n  \"dailyBudget\": \"40.00\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/{{adGroupId}}/sources/rtb/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										"{{adGroupId}}",
+										"sources",
+										"rtb",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "5.0 Content Ad Management",
+			"description": "",
+			"item": [
+				{
+					"name": "5.1 Upload Content Ads",
+					"description": "",
+					"item": [
+						{
+							"name": "Create Ads",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/contentads/batch/?adGroupId={{adGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"contentads",
+										"batch",
+										""
+									],
+									"query": [
+										{
+											"key": "adGroupId",
+											"value": "{{adGroupId}}",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Check Ad Batch Status",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/contentads/batch/{{batchId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"contentads",
+										"batch",
+										"{{batchId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "5.2 Manage Content Ads",
+					"description": "",
+					"item": [
+						{
+							"name": "Ad",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/contentads/{{contentAdId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"contentads",
+										"{{contentAdId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Ads",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/contentads/?adGroupId={{adGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"contentads",
+										""
+									],
+									"query": [
+										{
+											"key": "adGroupId",
+											"value": "{{adGroupId}}",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Ad",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"state\": \"INACTIVE\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/contentads/{{contentAdId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"contentads",
+										"{{contentAdId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "6.0 Publishers Management",
+			"description": "",
+			"item": [
+				{
+					"name": "6.1 Publisher Groups",
+					"description": "",
+					"item": [
+						{
+							"name": "Publisher Group",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/{{publisherGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										"{{publisherGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Publisher Groups",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Publisher Group",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Secondary whitelist\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Publisher Group",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Mobile campaigns whitelist\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/{{publisherGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										"{{publisherGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Publisher Group",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/{{publisherGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										"{{publisherGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "6.2 Publisher Groups Entries",
+					"description": "",
+					"item": [
+						{
+							"name": "Publisher Group Entry",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/publishergroups/{{publisherGroupId}}/entries/{{entryId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"publishergroups",
+										"{{publisherGroupId}}",
+										"entries",
+										"{{entryId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Publisher Group Entries",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/publishergroups/{{publisherGroupId}}/entries/?offset=0&limit=100",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"publishergroups",
+										"{{publisherGroupId}}",
+										"entries",
+										""
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "0",
+											"equals": true
+										},
+										{
+											"key": "limit",
+											"value": "100",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Publisher Group Entry",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"publisherGroupId\": \"153\",\n    \"publisher\": \"example.com/publisher3\",\n    \"source\": \"triplelift\"\n  },\n  {\n    \"publisherGroupId\": \"153\",\n    \"publisher\": \"example.com/publisher4\",\n    \"source\": \"yahoo\"\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/{{publisherGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										"{{publisherGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Publisher Group Entry",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"publisher\": \"example.com/publisher4\",\n  \"source\": \"yahoo\"\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/{{publisherGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										"{{publisherGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Publisher Group Entry",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/{{publisherGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										"{{publisherGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "6.3 Blacklisting",
+					"description": "",
+					"item": [
+						{
+							"name": "Publisher Status",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"label\": \"My label\",\n    \"url\": \"http://example.com/myblog\",\n    \"title\": \"My title\",\n    \"imageUrl\": \"http://example.com/myimage\",\n    \"imageCrop\": \"faces\",\n    \"displayUrl\": \"http://example.com/mycompany\",\n    \"brandName\": \"My Company\",\n    \"description\": \"My description\",\n    \"callToAction\": \"Read more\",\n    \"trackerUrls\": [\n      \"https://example.com/t1\",\n      \"https://example.com/t2\"\n    ]\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/adgroups/{{adGroupId}}/publishers/",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"adgroups",
+										"{{adGroupId}}",
+										"publishers",
+										""
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Publisher Status",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "accessToken",
+											"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"type": "any"
+										},
+										{
+											"key": "callBackUrl",
+											"type": "any"
+										},
+										{
+											"key": "authUrl",
+											"type": "any"
+										},
+										{
+											"key": "accessTokenUrl",
+											"type": "any"
+										},
+										{
+											"key": "clientId",
+											"type": "any"
+										},
+										{
+											"key": "clientSecret",
+											"type": "any"
+										},
+										{
+											"key": "clientAuth",
+											"type": "any"
+										},
+										{
+											"key": "grantType",
+											"type": "any"
+										},
+										{
+											"key": "scope",
+											"type": "any"
+										},
+										{
+											"key": "username",
+											"type": "any"
+										},
+										{
+											"key": "password",
+											"type": "any"
+										},
+										{
+											"key": "tokenType",
+											"value": "Bearer",
+											"type": "string"
+										},
+										{
+											"key": "redirectUri",
+											"type": "any"
+										},
+										{
+											"key": "refreshToken",
+											"type": "any"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n  {\n    \"name\": \"example.com/publisher1\",\n    \"status\": \"BLACKLISTED\",\n    \"level\": \"ADGROUP\",\n    \"source\": \"gumgum\"\n  },\n  {\n    \"name\": \"example.com/publisher2\",\n    \"status\": \"BLACKLISTED\",\n    \"level\": \"ADGROUP\",\n    \"source\": \"gumgum\"\n  },\n  {\n    \"name\": \"example.com/publisher3\",\n    \"status\": \"ENABLED\",\n    \"level\": \"ADGROUP\",\n    \"source\": \"gumgum\",\n    \"modifier\": 0.8\n  }\n]"
+								},
+								"url": {
+									"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/publishergroups/{{publisherGroupId}}",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"rest",
+										"v1",
+										"accounts",
+										"{{accountId}}",
+										"publishergroups",
+										"{{publisherGroupId}}"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "7.0 Reporting",
+			"description": "",
+			"item": [
+				{
+					"name": "Report Job Status",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/reports/{{jobId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"reports",
+								"{{jobId}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Report Job",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fields\": [\n    {\n      \"field\": \"Content Ad Id\"\n    },\n    {\n      \"field\": \"Content Ad\"\n    },\n    {\n      \"field\": \"Label\"\n    },\n    {\n      \"field\": \"Total Spend\"\n    },\n    {\n      \"field\": \"Impressions\"\n    },\n    {\n      \"field\": \"Clicks\"\n    },\n    {\n      \"field\": \"Avg. CPC\"\n    }\n  ],\n  \"filters\": [\n    {\n      \"field\": \"Date\",\n      \"operator\": \"between\",\n      \"from\": \"2016-10-01\",\n      \"to\": \"2016-10-31\"\n    },\n    {\n      \"field\": \"Ad Group Id\",\n      \"operator\": \"=\",\n      \"value\": \"2040\"\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/reports/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"reports",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "8.0 Utilities",
+			"description": "",
+			"item": [
+				{
+					"name": "GEO Locations",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/geolocations/?keys=US,US-HI&types=COUNTRY,REGION&nameContains=United&limit=10",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"geolocations",
+								""
+							],
+							"query": [
+								{
+									"key": "keys",
+									"value": "US,US-HI",
+									"equals": true
+								},
+								{
+									"key": "types",
+									"value": "COUNTRY,REGION",
+									"equals": true
+								},
+								{
+									"key": "nameContains",
+									"value": "United",
+									"equals": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "BlueKai Categories",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/bluekai/taxonomy/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"bluekai",
+								"taxonomy",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
