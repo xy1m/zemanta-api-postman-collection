@@ -1,11 +1,13 @@
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2299a4071461aeb7339d)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2299a4071461aeb7339d#?env%5BZemanta-ENV%20empty%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiIiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoiY2xpZW50X3NlY3JldCIsInZhbHVlIjoiIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImJhc2VVUkwiLCJ2YWx1ZSI6Imh0dHBzOi8vb25lYXBpLnplbWFudGEuY29tIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImFjY291bnRJZCIsInZhbHVlIjoiIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImNhbXBhaWduSWQiLCJ2YWx1ZSI6IiIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJidWRnZXRJZCIsInZhbHVlIjoiIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImdvYWxJZCIsInZhbHVlIjoiIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImFkR3JvdXBJZCIsInZhbHVlIjoiIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImJhdGNoSWQiLCJ2YWx1ZSI6IiIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJjb250ZW50QWRJZCIsInZhbHVlIjoiIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InB1Ymxpc2hlckdyb3VwSWQiLCJ2YWx1ZSI6IiIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJlbnRyeUlkIiwidmFsdWUiOiIiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoiZnJvbSIsInZhbHVlIjoiIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRvIiwidmFsdWUiOiIiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5Ijoiam9iSWQiLCJ2YWx1ZSI6IiIsInR5cGUiOiJ0ZXh0In1d)
 
 As Zemanta One API uses OAuth 2, you have two options to use this collection
 
 * Select Authorization OAuth 2.0 and set your {access_token} (Recommand)
-* Request access token then set `Authorization Bearer {access_token}` accross every API request.
+* Request {access_token} then set `Authorization Bearer {access_token}` accross every API request.
   - Select No Auth and set `Authorization Basic base64({client_id}:{client_secret})` to Authorization, 
 `application/x-www-form-urlencoded` to Content-Type, grant_type=client_credentials
+
+See also [Zemanta Authorization](http://dev.zemanta.com/one/api/#header-authentication)
 
 For developer convenience, you could define environment variables as I do, or just replace {{something}} with your own variable.
 
