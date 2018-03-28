@@ -53,402 +53,6 @@
 			]
 		},
 		{
-			"name": "2.0 Account Management",
-			"description": "",
-			"item": [
-				{
-					"name": "Account",
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": [
-								{
-									"key": "accessToken",
-									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
-									"type": "string"
-								},
-								{
-									"key": "addTokenTo",
-									"type": "any"
-								},
-								{
-									"key": "callBackUrl",
-									"type": "any"
-								},
-								{
-									"key": "authUrl",
-									"type": "any"
-								},
-								{
-									"key": "accessTokenUrl",
-									"type": "any"
-								},
-								{
-									"key": "clientId",
-									"type": "any"
-								},
-								{
-									"key": "clientSecret",
-									"type": "any"
-								},
-								{
-									"key": "clientAuth",
-									"type": "any"
-								},
-								{
-									"key": "grantType",
-									"type": "any"
-								},
-								{
-									"key": "scope",
-									"type": "any"
-								},
-								{
-									"key": "username",
-									"type": "any"
-								},
-								{
-									"key": "password",
-									"type": "any"
-								},
-								{
-									"key": "tokenType",
-									"value": "Bearer",
-									"type": "string"
-								},
-								{
-									"key": "redirectUri",
-									"type": "any"
-								},
-								{
-									"key": "refreshToken",
-									"type": "any"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\n  \"archived\":true\n}"
-						},
-						"url": {
-							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}",
-							"host": [
-								"{{baseURL}}"
-							],
-							"path": [
-								"rest",
-								"v1",
-								"accounts",
-								"{{accountId}}"
-							]
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Accounts",
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": [
-								{
-									"key": "accessToken",
-									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
-									"type": "string"
-								},
-								{
-									"key": "addTokenTo",
-									"type": "any"
-								},
-								{
-									"key": "callBackUrl",
-									"type": "any"
-								},
-								{
-									"key": "authUrl",
-									"type": "any"
-								},
-								{
-									"key": "accessTokenUrl",
-									"type": "any"
-								},
-								{
-									"key": "clientId",
-									"type": "any"
-								},
-								{
-									"key": "clientSecret",
-									"type": "any"
-								},
-								{
-									"key": "clientAuth",
-									"type": "any"
-								},
-								{
-									"key": "grantType",
-									"type": "any"
-								},
-								{
-									"key": "scope",
-									"type": "any"
-								},
-								{
-									"key": "username",
-									"type": "any"
-								},
-								{
-									"key": "password",
-									"type": "any"
-								},
-								{
-									"key": "tokenType",
-									"value": "Bearer",
-									"type": "string"
-								},
-								{
-									"key": "redirectUri",
-									"type": "any"
-								},
-								{
-									"key": "refreshToken",
-									"type": "any"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\n  \"archived\":true\n}"
-						},
-						"url": {
-							"raw": "{{baseURL}}/rest/v1/accounts/",
-							"host": [
-								"{{baseURL}}"
-							],
-							"path": [
-								"rest",
-								"v1",
-								"accounts",
-								""
-							]
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Update Account",
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": [
-								{
-									"key": "accessToken",
-									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
-									"type": "string"
-								},
-								{
-									"key": "addTokenTo",
-									"type": "any"
-								},
-								{
-									"key": "callBackUrl",
-									"type": "any"
-								},
-								{
-									"key": "authUrl",
-									"type": "any"
-								},
-								{
-									"key": "accessTokenUrl",
-									"type": "any"
-								},
-								{
-									"key": "clientId",
-									"type": "any"
-								},
-								{
-									"key": "clientSecret",
-									"type": "any"
-								},
-								{
-									"key": "clientAuth",
-									"type": "any"
-								},
-								{
-									"key": "grantType",
-									"type": "any"
-								},
-								{
-									"key": "scope",
-									"type": "any"
-								},
-								{
-									"key": "username",
-									"type": "any"
-								},
-								{
-									"key": "password",
-									"type": "any"
-								},
-								{
-									"key": "tokenType",
-									"value": "Bearer",
-									"type": "string"
-								},
-								{
-									"key": "redirectUri",
-									"type": "any"
-								},
-								{
-									"key": "refreshToken",
-									"type": "any"
-								}
-							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"My Account 1\",\n  \"targeting\": {\n    \"publisherGroups\": {\n      \"included\": [\n        \"153\"\n      ],\n      \"excluded\": [\n        \"154\"\n      ]\n    }\n  }\n}"
-						},
-						"url": {
-							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}",
-							"host": [
-								"{{baseURL}}"
-							],
-							"path": [
-								"rest",
-								"v1",
-								"accounts",
-								"{{accountId}}"
-							]
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Active Credits",
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": [
-								{
-									"key": "accessToken",
-									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
-									"type": "string"
-								},
-								{
-									"key": "addTokenTo",
-									"type": "any"
-								},
-								{
-									"key": "callBackUrl",
-									"type": "any"
-								},
-								{
-									"key": "authUrl",
-									"type": "any"
-								},
-								{
-									"key": "accessTokenUrl",
-									"type": "any"
-								},
-								{
-									"key": "clientId",
-									"type": "any"
-								},
-								{
-									"key": "clientSecret",
-									"type": "any"
-								},
-								{
-									"key": "clientAuth",
-									"type": "any"
-								},
-								{
-									"key": "grantType",
-									"type": "any"
-								},
-								{
-									"key": "scope",
-									"type": "any"
-								},
-								{
-									"key": "username",
-									"type": "any"
-								},
-								{
-									"key": "password",
-									"type": "any"
-								},
-								{
-									"key": "tokenType",
-									"value": "Bearer",
-									"type": "string"
-								},
-								{
-									"key": "redirectUri",
-									"type": "any"
-								},
-								{
-									"key": "refreshToken",
-									"type": "any"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\n  \"archived\":true\n}"
-						},
-						"url": {
-							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/credits/",
-							"host": [
-								"{{baseURL}}"
-							],
-							"path": [
-								"rest",
-								"v1",
-								"accounts",
-								"{{accountId}}",
-								"credits",
-								""
-							]
-						},
-						"description": ""
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "3.0 Campaign Management",
 			"description": "",
 			"item": [
@@ -1862,6 +1466,402 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "2.0 Account Management",
+			"description": "",
+			"item": [
+				{
+					"name": "Account",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"archived\":true\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"accounts",
+								"{{accountId}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Accounts",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"archived\":true\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/accounts/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"accounts",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"My Account 1\",\n  \"targeting\": {\n    \"publisherGroups\": {\n      \"included\": [\n        \"153\"\n      ],\n      \"excluded\": [\n        \"154\"\n      ]\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"accounts",
+								"{{accountId}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Active Credits",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "TRTmH4hLu44a7qowwqfGVx0pu2IsCe",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"type": "any"
+								},
+								{
+									"key": "callBackUrl",
+									"type": "any"
+								},
+								{
+									"key": "authUrl",
+									"type": "any"
+								},
+								{
+									"key": "accessTokenUrl",
+									"type": "any"
+								},
+								{
+									"key": "clientId",
+									"type": "any"
+								},
+								{
+									"key": "clientSecret",
+									"type": "any"
+								},
+								{
+									"key": "clientAuth",
+									"type": "any"
+								},
+								{
+									"key": "grantType",
+									"type": "any"
+								},
+								{
+									"key": "scope",
+									"type": "any"
+								},
+								{
+									"key": "username",
+									"type": "any"
+								},
+								{
+									"key": "password",
+									"type": "any"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "redirectUri",
+									"type": "any"
+								},
+								{
+									"key": "refreshToken",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n  \"archived\":true\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/rest/v1/accounts/{{accountId}}/credits/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"rest",
+								"v1",
+								"accounts",
+								"{{accountId}}",
+								"credits",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		},
