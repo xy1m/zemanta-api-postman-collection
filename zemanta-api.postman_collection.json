@@ -1,7 +1,7 @@
 {
 	"info": {
 		"name": "Zemanta API",
-		"_postman_id": "ba98d43d-6665-8fd6-b6c3-32599746fc06",
+		"_postman_id": "dfdfc8a6-9f87-eae5-1697-562d47e6b1b5",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -846,7 +846,7 @@
 									"raw": "{\n  \"creditId\": \"861\",\n  \"amount\": \"600\",\n  \"startDate\": \"2016-01-01\",\n  \"endDate\": \"2016-01-31\"\n}"
 								},
 								"url": {
-									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/budgets/{{budgetId}}",
+									"raw": "{{baseURL}}/rest/v1/campaigns/{{campaignId}}/budgets/",
 									"host": [
 										"{{baseURL}}"
 									],
@@ -856,7 +856,7 @@
 										"campaigns",
 										"{{campaignId}}",
 										"budgets",
-										"{{budgetId}}"
+										""
 									]
 								},
 								"description": ""
