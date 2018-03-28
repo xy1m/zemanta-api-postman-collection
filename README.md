@@ -4,7 +4,7 @@ As Zemanta One API uses OAuth 2, you have two options to use this collection
 
 * Select Authorization OAuth 2.0 and set your {access_token} (Recommand)
 * Request {access_token} then set `Authorization Bearer {access_token}` accross every API request.
-  - Select No Auth and set `Authorization Basic base64({client_id}:{client_secret})` to Authorization, 
+  - For requesting {access_token}, select No Auth and set `Authorization Basic base64({client_id}:{client_secret})` to Authorization, 
 `application/x-www-form-urlencoded` to Content-Type, grant_type=client_credentials
 
 See also [Zemanta Authorization](http://dev.zemanta.com/one/api/#header-authentication)
