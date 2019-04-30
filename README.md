@@ -9,7 +9,7 @@ As Zemanta One API uses OAuth 2, you have two options to use this collection
 
 See also [Zemanta Authorization](http://dev.zemanta.com/one/api/#header-authentication)
 
-For developer convenience, you could define environment variables as I do, or just replace {{something}} with your own variable.
+For developer convenience, you could define environment variables as I do, or just replace {{variable}} with your own static variable.
 
 See [Zemanta-ENV](./ZEMANTA-ENV.jpg)
 
