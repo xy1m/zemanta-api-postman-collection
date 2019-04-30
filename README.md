@@ -3,19 +3,13 @@
 As Zemanta One API uses OAuth 2, you have two options to use this collection
 
 1. Select Authorization OAuth 2.0 and set your {access_token} (Recommand)
-
-  1.1 Select OAuth2.0, Click `Get New Access Token`, select the token generated in step 3 ![Easy Auth Step1](easy-step1.png "Easy Auth Step1")
-  1.2 ![Easy Auth Step3](easy-step3.png "Easy Auth Step3")
+  - Select OAuth2.0, Click `Get New Access Token`, select the token generated in step 3 ![Easy Auth Step1](easy-step1.png "Easy Auth Step1")
+  - ![Easy Auth Step3](easy-step3.png "Easy Auth Step3")
 
 2. Request {access_token} then set `Authorization Bearer {access_token}` accross every API request.
-  2.1 set `Authorization Basic base64({client_id}:{client_secret})` to Authorization, you can get base64 value via 
-![Normal Auth Step1](normal-step1.png "Normal Step 1")
-
-  2.2 select `application/x-www-form-urlencoded` as Content-Type, set grant_type=client_credentials
-![Normal Auth Step2](normal-step2.png "Normal Step 2")
-
-  2.3 update `access_token` in environment then you're all set.
-![Normal Auth Step3](normal-step3.png "Normal Step 3")
+  - set `Authorization Basic base64({client_id}:{client_secret})` to Authorization, you can get base64 value via ![Normal Auth Step1](normal-step1.png "Normal Step 1")
+  - select `application/x-www-form-urlencoded` as Content-Type, set grant_type=client_credentials ![Normal Auth Step2](normal-step2.png "Normal Step 2")
+  - update `access_token` in environment then you're all set. ![Normal Auth Step3](normal-step3.png "Normal Step 3")
 
 See also [Zemanta Authorization](http://dev.zemanta.com/one/api/#header-authentication)
 
